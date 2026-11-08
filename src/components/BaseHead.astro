@@ -1,42 +1,113 @@
 ---
-// Import the global.css file here so that it is included on
-// all pages through the use of the <BaseHead /> component.
-import { Font } from "astro:assets";
-
+// BaseHead.astro
 import "../styles/global.css";
 
 interface Props {
 	title: string;
 	description: string;
+	image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description } = Astro.props;
+const { title, description, image = "/me.jpeg" } = Astro.props;
+const imageURL = new URL(image, Astro.site);
+
+const schemaData = {
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "Person",
+			"@id": `${canonicalURL.origin}/#person`,
+			name: "Oguntunde Caleb Fiyinfoluwa",
+			givenName: "Caleb Fiyinfoluwa",
+			familyName: "Oguntunde",
+			jobTitle: "Systems and Infrastructure Engineer",
+			url: canonicalURL.origin,
+			image: imageURL.href,
+			sameAs: [
+				"https://github.com/oasisMystre",
+				"https://x.com/onisaibogu",
+				"https://desk0.app",
+			],
+			knowsAbout: [
+				"Rust",
+				"C++",
+				"Systems Engineering",
+				"Network Infrastructure",
+				"Low-Latency IPC",
+				"Solana",
+				"ClickHouse",
+			],
+		},
+		{
+			"@type": "WebSite",
+			"@id": `${canonicalURL.origin}/#website`,
+			url: canonicalURL.origin,
+			name: "Oguntunde Caleb Fiyinfoluwa",
+			description: description,
+			publisher: {
+				"@id": `${canonicalURL.origin}/#person`,
+			},
+		},
+	],
+};
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="icon" href="/favicon.ico" />
-<link rel="sitemap" href="/sitemap-index.xml" />
+<meta name="theme-color" content="#0d0d0d" />
+<meta name="color-scheme" content="dark" />
+<meta name="author" content="Oguntunde Caleb Fiyinfoluwa" />
 <meta name="generator" content={Astro.generator} />
 
-<Font cssVariable="--font-atkinson" preload />
+<!-- Favicons generated from me.jpeg -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
 
-<!-- Canonical URL -->
+<!-- Google Fonts Preconnect and Stylesheet -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+	rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+/>
+
+<!-- Sitemap & Canonical -->
+<link rel="sitemap" href="/sitemap-index.xml" />
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
+<meta name="title" content={title} />
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:type" content="profile" />
+<meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
+<meta property="og:image" content={imageURL} />
+<meta property="og:image:alt" content="Oguntunde Caleb Fiyinfoluwa - Systems and Infrastructure Engineer" />
+<meta property="og:image:width" content="768" />
+<meta property="og:image:height" content="1024" />
+<meta property="profile:first_name" content="Oguntunde Caleb" />
+<meta property="profile:last_name" content="Fiyinfoluwa" />
+<meta property="profile:username" content="oasisMystre" />
 
 <!-- Twitter -->
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageURL} />
+<meta name="twitter:image:alt" content="Oguntunde Caleb Fiyinfoluwa" />
+<meta name="twitter:creator" content="@onisaibogu" />
+<meta name="twitter:site" content="@onisaibogu" />
+
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
