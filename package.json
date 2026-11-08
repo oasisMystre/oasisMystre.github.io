@@ -7,9 +7,11 @@
 	},
 	"scripts": {
 		"dev": "astro dev",
+		"prebuild": "node scripts/compress-assets.js",
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
+		"compress": "node scripts/compress-assets.js",
 		"format": "biome check --write ."
 	},
 	"dependencies": {
