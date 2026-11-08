@@ -1,3 +1,19 @@
+@font-face {
+	font-family: "Space Mono";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/fonts/space-mono-regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Space Mono";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("/fonts/space-mono-bold.woff2") format("woff2");
+}
+
 * {
 	margin: 0;
 	padding: 0;
