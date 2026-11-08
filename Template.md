@@ -73,29 +73,11 @@ Mobile wallet integration protocol
 Links: [github.com/oasisMystre/solana-wallets-vue]
 A protocol-level wallet adapter enabling mobile dApps, React Native apps, and mobile web browsers to interact with Phantom, Solflare, and Backpack wallets via mobile deeplinks where browser extension injection is not available.
 
-### djira
-
-Django async WebSocket framework
-Links: [github.com/oasisMystre/djira] [pypi.org/project/drf-sio/] [github.com/oasisMystre/jira]
-Author of drf-sio on PyPI. Connects Django REST Framework with async Socket.IO servers. Maps standard REST actions over WebSocket streams, providing model observers, Django signal handlers, pagination, and Redis PubSub backend.
-
-### Trustmint
-
-Web3 verification monorepo
-Links: [github.com/oasisMystre/trustmint]
-Core monorepo containing libraries, token logic, and verification binaries for trustmint.fun.
-
 ### Motus
 
 Cross-platform fitness application
 Links: [motus.fitness] [github.com/oasisMystre/motus]
 React Native mobile application built in a Turborepo monorepo with custom workout tracking logic and responsive styles.
-
-### Umbrella
-
-Prioritized Solana token transfers
-Links: [github.com/oasisMystre/umbrella]
-Utility for transferring Solana SPL tokens with priority fee optimization for congested network states.
 
 ### LyricMarc
 
@@ -147,4 +129,4 @@ Developed mobile fitness application in React Native within a Turborepo monorepo
 
 Independent Projects
 Systems and Full Stack Engineer
-Created Desk0 remote desktop infrastructure, authored drf-sio on PyPI, and deployed production Telegram bot microservices.
+Created Desk0 remote desktop infrastructure, built Solana mobile protocol integrations, and deployed production Telegram bot microservices.
