@@ -79,33 +79,6 @@ Cross-platform fitness application
 Links: [motus.fitness] [github.com/oasisMystre/motus]
 React Native mobile application built in a Turborepo monorepo with custom workout tracking logic and responsive styles.
 
-### LyricMarc
-
-Synchronized song lyrics mobile app
-Links: [github.com/oasisMystre/lyricmarc]
-Flutter mobile application for lyric retrieval, real-time scrolling, and track identification via music APIs.
-
-### Telegram Autonomous Bots
-
-Production bot microservices
-Links: [github.com/oasisMystre/memeflipai] [github.com/oasisMystre/MuseAIBot] [github.com/oasisMystre/profittown] [github.com/oasisMystre/onboarding-bot]
-
-MemeFlip AI
-Generative meme creation system
-Full stack application pairing a React and Vite interface with an asynchronous Telegram bot processing backend.
-
-MuseAIBot
-Audio model music generation
-Autonomous bot leveraging the Sona audio model to generate music tracks directly from user text prompts.
-
-ProfitTown
-Payment and accounting engine
-High performance ledger and transaction processing bot built on the Bun JavaScript runtime.
-
-Onboarding Bot
-Workflow automation pipeline
-Automated attendee onboarding and webinar engagement system.
-
 ## Skills
 
 Systems Programming
@@ -129,4 +102,4 @@ Developed mobile fitness application in React Native within a Turborepo monorepo
 
 Independent Projects
 Systems and Full Stack Engineer
-Created Desk0 remote desktop infrastructure, built Solana mobile protocol integrations, and deployed production Telegram bot microservices.
+Created Desk0 remote desktop infrastructure and built Solana mobile wallet protocol integrations.
