@@ -7,6 +7,7 @@ payouk.mystre@gmail.com
 github.com/oasisMystre
 x.com/onisaibogu
 desk0.app
+fiyinfoluwa.cv
 
 ## About
 

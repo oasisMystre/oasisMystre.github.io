@@ -4,6 +4,6 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://oasismystre.github.io",
+	site: "https://fiyinfoluwa.cv",
 	integrations: [sitemap()],
 });
