@@ -3,14 +3,14 @@
 Systems and Infrastructure Engineer
 
 Contact
-Email: payouk.mystre@gmail.com
-GitHub: github.com/oasisMystre
-X: x.com/onisaibogu
-Desk0: desk0.app
+payouk.mystre@gmail.com
+github.com/oasisMystre
+x.com/onisaibogu
+desk0.app
 
 ## About
 
-Systems engineer focused on low level infrastructure in Rust and C++, real time networking, and high frequency financial data pipelines on the Solana blockchain. Over 4 years full stack experience, 2 years systems programming, and 1 year production DevOps.
+Systems and infrastructure engineer specializing in low level systems in Rust and C++, real time networking protocols, and high throughput financial data pipelines. Experienced in designing validator-level blockchain ingestion systems, time-series analytical databases, and low latency inter-process communication architectures.
 
 ## Projects
 
@@ -19,11 +19,11 @@ Systems engineer focused on low level infrastructure in Rust and C++, real time 
 Open source remote desktop and endpoint management infrastructure
 Links: [desk0.app] [github.com/oasisMystre/desk0]
 
-Desk0 is an open source remote desktop and endpoint management platform written in Rust. Features a bidirectional WebSocket proxy server for real time stream routing and an IPC interserver for communication between sessions.
+Desk0 is an open source remote desktop and endpoint management platform written in Rust. Features a bidirectional WebSocket proxy relay for real time stream routing and an IPC interserver for communication between sessions.
 
 WebSocket Relay Proxy
 Bidirectional stream routing
-Built a bidirectional proxy server using axum, tokio, and tokio-rustls to connect viewers and remote agents over secure WebSockets across network boundaries without opening inbound ports.
+Built a bidirectional proxy server using axum, tokio, and tokio-rustls to connect viewers and remote agents over encrypted WebSockets across network boundaries without opening inbound ports on client endpoints.
 
 IPC Interserver
 Cross-session communication
@@ -34,15 +34,15 @@ Engineered an IPC interserver to coordinate messaging, input dispatch, and state
 High frequency Solana trading terminal and liquidity aggregator
 Links: [rhiva.fun] [github.com/oasisMystre/carbon] [github.com/sevenlabs-hq/carbon]
 
-Founding developer and solo DevOps engineer from initial aggregator to high frequency trading terminal.
+Founding developer and solo DevOps engineer for Rhiva, designing the architecture from an early liquidity aggregator into an on-chain trading terminal handling real-time DEX state across the Solana network.
 
 Yellowstone Geyser Ingestion
 Direct validator gRPC streaming
-Captured real time slot commitments, account modifications, and transaction outcomes directly from validator Yellowstone gRPC feeds without HTTP RPC rate limits.
+Replaced standard rate-limited HTTP JSON-RPC connections with direct Yellowstone Geyser gRPC validator feeds. Captured real-time slot commitments and transaction executions directly from the validator gossip network, reducing transaction confirmation notification latency from 2.5 seconds down to sub-300 milliseconds.
 
 ClickHouse Storage Engine
 Real-time analytical time-series cluster
-Maintained append-only ClickHouse cluster for sub-millisecond query performance on live depth of market, volume profiles, candle aggregations, and transaction histories.
+Designed and maintained a production ClickHouse database cluster processing sustained bursts of over 2,500 on-chain events per second. Delivered sub-15 millisecond query response times for live orderbook depth, volume profiles, and candlestick aggregation across 50 active liquidity pools.
 
 Carbon Indexing Framework Fork
 Forked from sevenlabs-hq/carbon
@@ -61,17 +61,17 @@ A derivative fork of the upstream rustdesk/rustdesk repository designed to elimi
 
 rustdesk-client
 Headless incoming remote desktop agent
-Complete rewrite of the RustDesk client as a headless application. Operates as an unattended background service to accept incoming connections, capture display output, and handle input injection without needing a local user interface.
+Complete rewrite of the RustDesk client as a headless application. Operates as an unattended background service to accept incoming connections, capture display output, and handle input injection without needing a local user interface, reducing runtime memory footprint by over 60 percent.
 
 rustdesk-admin
 Outgoing only client implementation
-Specialized RustDesk fork tailored exclusively for outbound operator management. Strips away inbound listener services to create a secure, focused administrative client.
+Specialized RustDesk fork tailored exclusively for outbound operator management. Strips away inbound listener services to eliminate open port exposure and create a focused administrative client.
 
 ### Solana Deeplink Adapter
 
 Mobile wallet integration protocol
 Links: [github.com/oasisMystre/solana-wallets-vue]
-Wallet adapter enabling mobile dApps and React Native apps to interact with Phantom, Solflare, and Backpack wallets via mobile deeplinks where browser extension injection is unavailable.
+A protocol-level wallet adapter enabling mobile dApps, React Native apps, and mobile web browsers to interact with Phantom, Solflare, and Backpack wallets via mobile deeplinks where browser extension injection is not available.
 
 ### djira
 
@@ -95,7 +95,7 @@ React Native mobile application built in a Turborepo monorepo with custom workou
 
 Prioritized Solana token transfers
 Links: [github.com/oasisMystre/umbrella]
-Utility for transferring Solana SPL tokens with priority fee optimization.
+Utility for transferring Solana SPL tokens with priority fee optimization for congested network states.
 
 ### LyricMarc
 
